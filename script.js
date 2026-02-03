@@ -1,30 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const loginCard = document.getElementById('login-card');
+    const dashboard = document.getElementById('dashboard');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const panels = document.querySelectorAll('.panel');
 
-    // हीरो सेक्शन एनिमेशन को कंट्रोल करने के लिए
-    const heroSection = document.querySelector('.hero');
-    if(heroSection) {
-        // 2 सेकंड के बाद 'details-visible' क्लास जोड़ें
-        setTimeout(() => {
-            heroSection.classList.add('details-visible');
-        }, 2000); // 2000 मिलीसेकंड = 2 सेकंड
-    }
-
-    // बाकी का स्क्रॉल एनिमेशन का कोड (यह पहले से हो सकता है)
-    const revealElements = document.querySelectorAll('.reveal');
-    if (revealElements.length > 0) {
-        const revealObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
+    if (loginForm && loginCard && dashboard) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            loginCard.setAttribute('hidden', '');
+            dashboard.removeAttribute('hidden');
         });
     }
+
+    const activatePanel = (targetId) => {
+        navButtons.forEach((button) => {
+            button.classList.toggle('active', button.dataset.target === targetId);
+        });
+
+        panels.forEach((panel) => {
+            panel.classList.toggle('active', panel.id === targetId);
+        });
+    };
+
+    navButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            activatePanel(button.dataset.target);
+        });
+    });
 });
