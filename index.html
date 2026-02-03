@@ -3,126 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alok Vishwakarma - Graphic Designer</title>
+    <title>The Archer Chess App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-badge">AC</span>
+                <div>
+                    <h1>The Archer Chess App</h1>
+                    <p>Kids learning · Safe in-app live classes</p>
+                </div>
+            </div>
+            <button class="support-chip" type="button">Help & Support</button>
+        </header>
 
-    <div class="video-bar">
-        <video src="videos/animation.mp4" autoplay loop muted playsinline></video>
+        <main class="app-main">
+            <section class="login-card" id="login-card">
+                <div class="login-copy">
+                    <h2>Start Learning Chess Today</h2>
+                    <p>Apne details fill karke login kariye, phir Home, Study, Live Class, Test & Play Self, Account sections explore kariye.</p>
+                    <ul>
+                        <li>Verified teachers</li>
+                        <li>Daily practice tasks</li>
+                        <li>In-app live classes (no Zoom/Meet)</li>
+                    </ul>
+                </div>
+                <form class="login-form" id="login-form">
+                    <label>
+                        Student Name
+                        <input type="text" name="studentName" placeholder="Enter student name" required>
+                    </label>
+                    <label>
+                        Parent Mobile
+                        <input type="tel" name="parentPhone" placeholder="Enter mobile number" required>
+                    </label>
+                    <label>
+                        Grade
+                        <select name="grade" required>
+                            <option value="">Select grade</option>
+                            <option>Class 3</option>
+                            <option>Class 4</option>
+                            <option>Class 5</option>
+                            <option>Class 6</option>
+                        </select>
+                    </label>
+                    <button class="primary-btn" type="submit">Login & Continue</button>
+                </form>
+            </section>
+
+            <section class="dashboard" id="dashboard" hidden>
+                <nav class="app-nav">
+                    <button class="nav-btn active" data-target="home">Home</button>
+                    <button class="nav-btn" data-target="study">Study</button>
+                    <button class="nav-btn" data-target="live">Live Class</button>
+                    <button class="nav-btn" data-target="test">Test & Play Self</button>
+                    <button class="nav-btn" data-target="account">Account</button>
+                </nav>
+
+                <div class="nav-panels">
+                    <section class="panel active" id="home">
+                        <div class="panel-header">
+                            <h2>Welcome back, Archer!</h2>
+                            <p>Today ka goal: 20 minutes practice + 1 live class.</p>
+                        </div>
+                        <div class="panel-grid">
+                            <article class="card">
+                                <h3>Daily Chess Drill</h3>
+                                <p>Checkmate in 2 moves.</p>
+                                <button class="ghost-btn" type="button">Start Drill</button>
+                            </article>
+                            <article class="card">
+                                <h3>Coach Message</h3>
+                                <p>"Great progress! Focus on rook endgames today."</p>
+                                <button class="ghost-btn" type="button">Read Tips</button>
+                            </article>
+                            <article class="card highlight">
+                                <h3>Live Class Reminder</h3>
+                                <p>6:00 PM - Tactical Vision (In-App Video Call)</p>
+                                <button class="primary-btn" type="button">Join Live Class</button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="panel" id="study">
+                        <div class="panel-header">
+                            <h2>Study Modules</h2>
+                            <p>Step-by-step lessons created for kids.</p>
+                        </div>
+                        <div class="panel-grid">
+                            <article class="card">
+                                <h3>Beginner Tactics</h3>
+                                <p>Forks, pins, skewers explained with puzzles.</p>
+                                <button class="ghost-btn" type="button">Open Lesson</button>
+                            </article>
+                            <article class="card">
+                                <h3>Openings</h3>
+                                <p>Learn the Archer Defense in 10 moves.</p>
+                                <button class="ghost-btn" type="button">Practice</button>
+                            </article>
+                            <article class="card">
+                                <h3>Endgame Skills</h3>
+                                <p>King & pawn endings for beginners.</p>
+                                <button class="ghost-btn" type="button">Solve</button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="panel" id="live">
+                        <div class="panel-header">
+                            <h2>Live Classes (In-App)</h2>
+                            <p>Yahin app ke andar video call live class chalegi — Zoom/Meet ki zarurat nahi.</p>
+                        </div>
+                        <div class="live-layout">
+                            <div class="live-video">
+                                <div class="video-screen">
+                                    <span>Coach Video Stream</span>
+                                    <p>HD video call in The Archer Chess App</p>
+                                </div>
+                                <div class="video-controls">
+                                    <button class="ghost-btn" type="button">Mic</button>
+                                    <button class="ghost-btn" type="button">Camera</button>
+                                    <button class="primary-btn" type="button">Raise Hand</button>
+                                </div>
+                            </div>
+                            <aside class="live-sidebar">
+                                <div class="card">
+                                    <h3>Show & Learn</h3>
+                                    <ul>
+                                        <li>Coach board sharing</li>
+                                        <li>Live move analysis</li>
+                                        <li>Kids question corner</li>
+                                    </ul>
+                                </div>
+                                <div class="card">
+                                    <h3>Today’s Agenda</h3>
+                                    <p>Theme: Tactical Vision + Mini Puzzle Challenge.</p>
+                                    <button class="ghost-btn" type="button">Download Notes</button>
+                                </div>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section class="panel" id="test">
+                        <div class="panel-header">
+                            <h2>Test & Play Self</h2>
+                            <p>Self practice mode for kids. Earn stars after every test.</p>
+                        </div>
+                        <div class="panel-grid">
+                            <article class="card">
+                                <h3>5-Min Rapid Test</h3>
+                                <p>10 quick puzzles + instant feedback.</p>
+                                <button class="primary-btn" type="button">Start Test</button>
+                            </article>
+                            <article class="card">
+                                <h3>Play vs AI</h3>
+                                <p>Set difficulty & learn from mistakes.</p>
+                                <button class="ghost-btn" type="button">Play Now</button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="panel" id="account">
+                        <div class="panel-header">
+                            <h2>Account</h2>
+                            <p>Manage student profile and class schedule.</p>
+                        </div>
+                        <div class="panel-grid">
+                            <article class="card">
+                                <h3>Student Profile</h3>
+                                <p>Name, class, and progress stats.</p>
+                                <button class="ghost-btn" type="button">Edit Profile</button>
+                            </article>
+                            <article class="card">
+                                <h3>Parent Dashboard</h3>
+                                <p>Attendance, payments, and feedback.</p>
+                                <button class="ghost-btn" type="button">Open Dashboard</button>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <header class="hero-section">
-        <div class="hero-photo-row">
-            <img src="images/profile.jpg" alt="Alok Vishwakarma Profile" class="hero-photo">
-            <img src="images/photo1.jpg" alt="Showcase Photo 1" class="hero-photo">
-            <img src="images/photo2.jpg" alt="Showcase Photo 2" class="hero-photo">
-        </div>
-        <div class="hero-details">
-            <h1>Alok Vishwakarma</h1>
-            <p class="subtitle">Graphic Designer & Visual Artist</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/alok-vishwakarma-4563a0302/" target="_blank">LinkedIn</a> / 
-                <a href="https://www.instagram.com/alok_vision2025/" target="_blank">Instagram</a> / 
-                <a href="https://x.com/artist_alok_" target="_blank">X (Twitter)</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="project-showcase">
-            <h2>My Work</h2>
-            
-            <h3 style="margin-top: 40px;">YouTube Thumbnails</h3>
-            <div class="project-grid project-grid-large">
-                <div class="project-item"><img src="images/thumb-business.jpg" alt="Business Strategy Thumbnail"></div>
-                <div class="project-item"><img src="images/thumb-goat.jpg" alt="GOAT Thumbnail"></div>
-                <div class="project-item"><img src="images/thumb-modi.jpg" alt="Modi vs Dhruv Thumbnail"></div>
-            </div>
-
-            <h3 style="margin-top: 60px;">Creative Posters</h3>
-            <div class="project-grid">
-                <div class="project-item"><img src="images/main-pro.jpg" alt="Designer Poster Project"></div>
-                <div class="project-item"><img src="images/thumb2.jpg" alt="Red Door Poster"></div>
-                <div class="project-item"><img src="images/thumb3.jpg" alt="AKV3 Branding"></div>
-                <div class="project-item"><img src="images/thumb1.jpg" alt="Green Logo Design"></div>
-            </div>
-
-            <h3 style="margin-top: 60px;">Logo Designs</h3>
-            <div class="project-grid project-grid-small">
-                <div class="project-item"><img src="images/logo1.jpg" alt="Logo Design 1"></div>
-                <div class="project-item"><img src="images/logo2.jpg" alt="Logo Design 2"></div>
-                <div class="project-item"><img src="images/logo3.jpg" alt="Logo Design 3"></div>
-                
-            </div>
-        </section>
-
-        <section class="skills-section-new">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Design</h3>
-                    <ul>
-                        <li>Graphic Designing</li>
-                        <li>Logo & Branding</li>
-                        <li>Poster & Banner Design</li>
-                        <li>YouTube Thumbnails</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Technical</h3>
-                    <ul>
-                        <li>MS Office Suite</li>
-                        <li>Document Formatting</li>
-                        <li>Basic HTML & CSS</li>
-                        <li>Video Editing (Basic)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="education-section">
-            <h2>Qualification</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>B.Sc. (Pursuing)</h3>
-                        <p>2023–2026 | Veer Bahadur Singh Purvanchal University</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Intermediate (12th)</h3>
-                        <p>2022 | UP Board | Sardar Ballabh Bhai Patel Inter College</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>High School (10th)</h3>
-                        <p>2020 | UP Board | Sardar Ballabh Bhai Patel Inter College</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="note-section">
-            <div class="handwritten-note">
-                <p>हर डिज़ाइन को मैं सिर्फ काम नहीं, बल्कि अपना जुनून और मेहनत समझकर बनाता हूँ। उम्मीद है आपको मेरा काम पसंद आएगा।</p>
-                <span>- Alok Vishwakarma</span>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <h2>Get in Touch</h2>
-        <p><strong>Email:</strong> <a href="mailto:officialalokvishwakarma333@gmail.com">officialalokvishwakarma333@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+919554299567">+91 9554299567</a></p>
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/alok-vishwakarma-4563a0302/" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/alok_vision2025/" target="_blank">Instagram</a>
-            <a href="https://x.com/artist_alok_" target="_blank">X (Twitter)</a>
-        </div>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
