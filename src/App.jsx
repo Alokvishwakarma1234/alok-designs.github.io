@@ -81,7 +81,7 @@ const profile = {
   role: 'Graphic Designer',
   subrole: 'Video Editor • Vibe Coder',
   bio: 'Building Brands, Apps & Digital Experiences with Creativity & Code.',
-  photo: '/images/alok-dp.jpg',
+  photo: './images/alok-dp.jpg',
   portfolio: 'https://visualechostudio.com',
   instagram: 'https://www.instagram.com/a.l.o.k.3i/',
   github: 'https://github.com/Alokvishwakarma1234',
