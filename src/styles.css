@@ -406,6 +406,8 @@ button {
 .link-icon.snapchat { background: #fffc00; color: #000000; }
 .link-icon.pinterest { background: #e60023; }
 .link-icon.reddit { background: #ff4500; }
+.link-icon.portfolio { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+.link-icon.thissite { background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%); }
 
 .link-copy {
   display: flex;

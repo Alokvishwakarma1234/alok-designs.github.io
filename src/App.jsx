@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Facebook,
   Github,
+  Globe,
   Instagram,
   Linkedin,
   Mail,
@@ -119,6 +120,13 @@ const linkSections = [
       { label: 'Art Portfolio', sub: '@artist_alok.k_vishwakarma_090', href: 'https://www.instagram.com/artist_alok.k_vishwakarma_090/', icon: Instagram, tone: 'instagram' },
       { label: 'Visual Echo Studio Page', sub: 'Facebook Studio Page', href: 'https://www.facebook.com/visualechostudio/', icon: Facebook, tone: 'facebook' },
       { label: 'Alok Visual Echo Studio', sub: 'Facebook Profile', href: 'https://www.facebook.com/alokvisualechostudio', icon: Facebook, tone: 'facebook' },
+    ]
+  },
+  {
+    title: '🌐 My Websites & Projects',
+    items: [
+      { label: 'Visual Echo Studio', sub: 'visualechostudio.com • Design Portfolio', href: 'https://visualechostudio.com', icon: Globe, tone: 'portfolio' },
+      { label: 'Social Profile (This Site)', sub: 'alokvishwakarma1234.github.io', href: 'https://alokvishwakarma1234.github.io/alok-designs.github.io/', icon: Globe, tone: 'thissite' },
     ]
   },
   {
