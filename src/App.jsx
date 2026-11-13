@@ -17,24 +17,24 @@ import {
   Youtube
 } from 'lucide-react';
 
-// Authentic Official Verified Badge (8-point scalloped star with white checkmark)
+// Authentic Official Verified Badge (Razor-sharp official verified rosette with crisp white checkmark)
 function VerifiedBadge({ size = 20, className = '' }) {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 24 24"
+      viewBox="0 0 22 22"
       fill="none"
       className={`verified-badge ${className}`}
-      style={{ verticalAlign: 'middle', display: 'inline-block', flexShrink: 0 }}
+      style={{ display: 'inline-block', verticalAlign: 'middle', flexShrink: 0 }}
       title="Verified Account"
     >
       <path
-        d="M22.5 12.5c0-1.58-.8-2.95-2.03-3.76.22-1.87-.96-3.62-2.73-4.14-.95-1.32-2.52-2.1-4.24-2.1s-3.29.78-4.24 2.1c-1.77.52-2.95 2.27-2.73 4.14C5.3 9.55 4.5 10.92 4.5 12.5s.8 2.95 2.03 3.76c-.22 1.87.96 3.62 2.73 4.14.95 1.32 2.52 2.1 4.24 2.1s3.29-.78 4.24-2.1c1.77-.52 2.95-2.27 2.73-4.14 1.23-.81 2.03-2.18 2.03-3.76z"
+        d="M20.396 11a2.82 2.82 0 00-.73-1.95 2.81 2.81 0 00.17-2.07 2.84 2.84 0 00-1.4-1.54 2.85 2.85 0 00-1.98-.16 2.82 2.82 0 00-1.63-1.27 2.84 2.84 0 00-2.06.31A2.83 2.83 0 0011 3.6a2.83 2.83 0 00-1.76.72 2.84 2.84 0 00-2.06-.31 2.82 2.82 0 00-1.63 1.27 2.85 2.85 0 00-1.98.16 2.84 2.84 0 00-1.4 1.54 2.81 2.81 0 00.17 2.07A2.82 2.82 0 001.604 11a2.82 2.82 0 00.73 1.95 2.81 2.81 0 00-.17 2.07 2.84 2.84 0 001.4 1.54 2.85 2.85 0 001.98.16 2.82 2.82 0 001.63 1.27 2.84 2.84 0 002.06-.31A2.83 2.83 0 0011 18.4a2.83 2.83 0 001.76-.72 2.84 2.84 0 002.06.31 2.82 2.82 0 001.63-1.27 2.85 2.85 0 001.98-.16 2.84 2.84 0 001.4-1.54 2.81 2.81 0 00-.17-2.07 2.82 2.82 0 00.73-1.95z"
         fill="#0095f6"
       />
       <path
-        d="M10.2 16.2l-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4-7 7z"
+        d="M9.68 14.54l-3.23-3.23 1.29-1.29 1.94 1.94 4.52-4.52 1.29 1.29-5.89 5.81z"
         fill="#ffffff"
       />
     </svg>
@@ -78,7 +78,8 @@ const profile = {
   name: 'Alok Vishwakarma',
   handle: 'a.l.o.k.3i',
   location: 'Mumbai, India',
-  role: 'Video Editor • Vibe Coder',
+  role: 'Graphic Designer',
+  subrole: 'Video Editor • Vibe Coder',
   bio: 'Building Brands, Apps & Digital Experiences with Creativity & Code.',
   photo: '/images/alok-dp.jpg',
   portfolio: 'https://visualechostudio.com',
@@ -210,9 +211,12 @@ function Home() {
         </div>
         <h1 className="hero-name">
           {profile.name}
-          <VerifiedBadge size={22} className="verified-badge" />
+          <VerifiedBadge size={21} className="verified-badge" />
         </h1>
         <p className="role">{profile.role}</p>
+        <p className="subrole">
+          Video Editor <b>•</b> Vibe Coder
+        </p>
 
         {/* Interactive Clickable Chip Buttons */}
         <div className="chips">
@@ -375,7 +379,7 @@ function InstagramPage() {
           </div>
         </div>
         <p className="ig-bio">
-          🎬 Video Editor | ⚡ Vibe Coder | 🎨 Designer
+          🎨 Graphic Designer | 🎬 Video Editor | ⚡ Vibe Coder
           <br />
           Crafting Visual Stories & Digital Experiences.
         </p>
